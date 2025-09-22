@@ -1,0 +1,53 @@
+CI  is the process of automatically testing and combining small pieces of code
+CD is the automated process of packaging up your tested code and delivering it to your users
+PUTTING ALL THINGS TOGETHER 
+Making ci cd possible is done using an automated process, that is called pipeline
+
+CRICKET MATCH
+CI --->
+TOOLS:
+1.VCS(GIT, GITHUB,GITLAB)
+2.CI/CD: (JENKINS,DOCKER)
+3.TESTING :(PYTEST,JEST)
+4.DEPLOYMENT (KEBERNETES,ANSIBLE)
+
+pipeline:
+Automated series of steps 
+checkout code
+install dependencies
+run tests
+(deploy)
+
+
+BASIC STRUCTURE:
+pipeline is stored in folder
+.github/workflows/*.yml
+
+workflow has 4 main parts
+1.name : name of workflow
+2. on : push
+        - branch main
+        - other branches
+     
+pull request
+3. Jobs: whats tasks workflow will done
+4. steps:
+    setup python
+ run pytest 
+ name : run tests
+
+
+test_file.py 
+
+
+
+#HOW IT WORKS
+when you push code to github
+it starts pipeline
+it runs each step in yml test_file
+install depenedencies
+install packages
+run tests
+result :
+fail(red) of pass(green)
+
